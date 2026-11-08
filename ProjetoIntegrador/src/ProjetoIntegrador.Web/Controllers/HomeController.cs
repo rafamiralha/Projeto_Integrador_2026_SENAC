@@ -28,4 +28,15 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    [HttpPost]
+    public IActionResult Index(UsuarioViewModel usuario)
+    {
+        // Coloque o breakpoint aqui
+
+        var nome = usuario.username;
+        var senha = usuario.senha;
+
+        return View();
+    }
 }
