@@ -2,20 +2,31 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Tela de login</h1>
+<div class="container d-flex justify-content-center align-items-center">
+    <form asp-controller="Home" asp-action="Index" method="post"
+          class="w-50 p-4 border rounded shadow">
 
-    <div class="form-group m-4">
-        <div class="text-center m-4">
-            <label for="username" style="width: 70px">Usuário:</label>
-            <input type="text" id="username" name="username" />
+        <h1 class="display-5 text-center mb-4">Tela de login</h1>
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Usuário:</label>
+            <input type="text" class="form-control"
+                   id="username" name="username"
+                   placeholder="Digite seu usuário" />
         </div>
 
-        <div class="text-center m-4">
-            <label for="password" style="width: 70px">Senha:</label>
-            <input type="password" id="password" name="password" />
+        <div class="mb-4">
+            <label for="password" class="form-label">Senha:</label>
+            <input type="password" class="form-control"
+                   id="password" name="password"
+                   placeholder="Digite sua senha" />
         </div>
-    <button type="submit" class="btn btn-primary w-25">Entrar</button>
-    </div>
 
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+                Entrar
+            </button>
+        </div>
+
+    </form>
 </div>
