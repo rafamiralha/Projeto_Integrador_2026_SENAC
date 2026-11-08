@@ -81,8 +81,8 @@ appsettings.*.local.json
 # ==========================================
 
 node_modules/
-dist/
-
+# Ignorar dist apenas na raiz do projeto
+/dist/
 # ==========================================
 # ARQUIVOS TEMPORÁRIOS
 # ==========================================
