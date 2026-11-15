@@ -59,7 +59,8 @@ public class HomeController : Controller
         }
         if (usuarioEncontrado.Ra == RA && senhaEncontrada.senha == senha)
         {
-            return RedirectToAction("Index", "Dashboard");
+            HttpContext.Session.SetString("RA", usuarioEncontrado.Ra);
+            return RedirectToAction("Index", "Aluno");
         }
         return View();
     }

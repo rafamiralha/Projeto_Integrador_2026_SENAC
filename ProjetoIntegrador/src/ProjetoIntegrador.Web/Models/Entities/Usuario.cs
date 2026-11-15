@@ -21,13 +21,13 @@ namespace ProjetoIntegrador.Web.Models.Entities
         public string Ra { get; set; } = string.Empty;
 
         [Column("telefone")]
-        public string? Telefone { get; set; }
+        public string Telefone { get; set; } = string.Empty;
 
         [Column("endereco")]
-        public string? Endereco { get; set; }
+        public string Endereco { get; set; } = string.Empty;
         [Column("senha")]
-        public string? senha { get; set; }
+        public string senha { get; set; } = string.Empty;
         [Column("tipo_usuario")]
-        public string? TipoUsuario { get; set; }
+        public string TipoUsuario { get; set; } = string.Empty;
     }
 }

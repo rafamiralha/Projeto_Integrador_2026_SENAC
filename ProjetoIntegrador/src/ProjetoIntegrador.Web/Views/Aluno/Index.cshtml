@@ -1,0 +1,79 @@
+@model EditarAlunoViewModel
+
+@{
+    ViewData["Title"] = "Dados do Aluno";
+}
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+
+    <div class="w-75 p-4 border rounded shadow">
+
+        <h1 class="display-5 text-center mb-4">
+            Dados do Aluno
+        </h1>
+
+        @if (TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+                @TempData["Mensagem"]
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar">
+                </button>
+
+            </div>
+        }
+
+        @if (TempData["Erro"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+
+                @TempData["Erro"]
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar">
+                </button>
+
+            </div>
+        }
+        <form asp-controller="Aluno" asp-action="Salvar" method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Nome:</label>
+                <input type="text" class="form-control" name="nome" value="@Model.nome" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">RA:</label>
+                <input type="text" class="form-control" name="RA" value="@Model.RA" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">CPF:</label>
+                <input type="text" class="form-control" name="cpf" value="@Model.cpf" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Endereço:</label>
+                <input type="text" class="form-control" name="endereco" value="@Model.endereco" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Telefone:</label>
+                <input type="text" class="form-control" name="telefone" value="@Model.telefone" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Tipo de usuário:</label>
+                <input type="text" class="form-control" name="tipo_usuario" value="@Model.tipo_usuario" readonly />
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">
+                    Salvar alterações
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
