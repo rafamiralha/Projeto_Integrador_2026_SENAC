@@ -25,5 +25,9 @@ namespace ProjetoIntegrador.Web.Models.Entities
 
         [Column("endereco")]
         public string? Endereco { get; set; }
+        [Column("senha")]
+        public string? senha { get; set; }
+        [Column("tipo_usuario")]
+        public string? TipoUsuario { get; set; }
     }
 }

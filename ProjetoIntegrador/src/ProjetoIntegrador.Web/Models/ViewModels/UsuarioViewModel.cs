@@ -6,4 +6,5 @@ public class UsuarioViewModel
 {
     public string username { get; set; } = string.Empty;
     public string senha { get; set; } = string.Empty;
-}
+    public string RA { get; set; } = string.Empty;
+}   
